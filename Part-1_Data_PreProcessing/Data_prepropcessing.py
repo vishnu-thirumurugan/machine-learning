@@ -30,8 +30,8 @@ dataset = pd.read_csv("Data.csv") # creating the dataframe with the in-built fun
 # in this data, we store the country, age and the salery in variable 'X'
 # we then store the 'Purchased/ Not purchased' in the variable 'y'
 
-X = dataset.iloc[ : , : -1].values # matrix of features
-y = dataset.iloc[ : , -1]. values  # dependent variable vector
+X = dataset.iloc[ : , : -1].values # matrix of features          # all rows and all columns except last one
+y = dataset.iloc[ : , -1]. values  # dependent variable vector   # all rows and and last column (label)
 
 # here iloc means locate index. first half represents the rows and the second half represents column.
 # range is represented by the ":" sign. 

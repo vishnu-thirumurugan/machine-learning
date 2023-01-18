@@ -96,5 +96,33 @@ plt.xlabel('Years of Experience')
 plt.ylabel('Salary')
 plt.show()
   
- 
+
+  ##############################
+# Making a single prediction #
+##############################
+
+# if you want to predict the salary based on only the experience of the person, follow below step
+print(regressor.predict([[12]])) # here '12' is the experience of the person
+
+# Notice that the value of the feature (12 years) was input in a double pair of square brackets. That's because the "predict" method always expects a 2D array as the format of its inputs. And putting 12 into a double pair of square brackets makes the input exactly a 2D array. Simply put:
+
+# 12→scalar 
+
+# [12]→1D array 
+
+# [[12]]→2D array
+
+
+###############################################################################
+# Getting the final linear regression equation with the value of coefficients #
+###############################################################################
+
+print(regressor.coef_)
+print(regressor.intercept_)
+
+# Therefore, the equation of our simple linear regression model is:
+
+# The formula will be Salary=9345.94×YearsExperience+26816.19 
+
+# To get these coefficients we called the "coef_" and "intercept_" attributes from our regressor object. Attributes in Python are different than methods and usually return a simple value or an array of values.
  
